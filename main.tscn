@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dupacme0eplfg"]
 
 [ext_resource type="Script" uid="uid://tu74dutfe806" path="res://player.gd" id="1_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://dvqbeygej8xa4" path="res://amin.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://ca3jx4rtdee5p" path="res://awais.png" id="2_0xm2m"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0xm2m"]
 friction = 0.3
@@ -38,7 +38,7 @@ script = ExtResource("1_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1271954369]
 position = Vector2(-1, 1)
-texture = ExtResource("1_ig7tw")
+texture = ExtResource("2_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1455754112]
 position = Vector2(2, 52.5)
