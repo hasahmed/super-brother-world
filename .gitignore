@@ -1,0 +1,52 @@
+# Godot 4.x --------------------------------------------------
+
+# Godot-specific folders
+.import/
+.export/
+.godot/
+
+# Mono / C# (if you use it)
+.mono/
+data_*/
+*.csproj
+*.sln
+
+# Godot generated files
+*.translation
+*.tmp
+*.log
+
+# Exported builds
+builds/
+export/
+*.zip
+
+# Editor backups
+*~
+*.bak
+*.old
+*.orig
+
+# OS / Editor junk ------------------------------------------
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# Godot crash reports
+crash-*.txt# Godot 4+ specific ignores
+.godot/
+/android/
