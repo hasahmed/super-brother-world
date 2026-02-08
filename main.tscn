@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dupacme0eplfg"]
 
 [ext_resource type="Script" uid="uid://tu74dutfe806" path="res://player.gd" id="1_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://ca3jx4rtdee5p" path="res://awais.png" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://d0ptk8qd0a6ra" path="res://maryann.png" id="2_0xm2m"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0xm2m"]
 friction = 0.3
@@ -14,7 +14,7 @@ size = Vector2(1206, 39)
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h2yge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
-size = Vector2(321.5, 707)
+size = Vector2(202, 518)
 
 [node name="Node2D" type="Node2D" unique_id=1379440295]
 
@@ -40,11 +40,11 @@ physics_material_override = SubResource("PhysicsMaterial_h2yge")
 script = ExtResource("1_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1271954369]
-position = Vector2(-1, 1)
-scale = Vector2(0.5, 0.5)
+position = Vector2(-2, 1)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1455754112]
-position = Vector2(15, 15)
+position = Vector2(7.5, 6.5)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_0xm2m")
