@@ -7,7 +7,7 @@
 friction = 0.3
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
-size = Vector2(1206, 138)
+size = Vector2(1206, 39)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ig7tw"]
 
@@ -19,27 +19,32 @@ size = Vector2(321.5, 707)
 [node name="Node2D" type="Node2D" unique_id=1379440295]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=740600198]
-position = Vector2(633, 979)
+position = Vector2(530, 551)
 physics_material_override = SubResource("PhysicsMaterial_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1672540626]
+position = Vector2(0, -1.5)
+scale = Vector2(0.6400024, 1)
 shape = SubResource("RectangleShape2D_ig7tw")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1303603756]
 modulate = Color(1, 0, 1, 1)
+scale = Vector2(0.6400049, 0.32)
 texture = SubResource("PlaceholderTexture2D_ig7tw")
 region_enabled = true
 region_rect = Rect2(100, 100, 1200, 130)
 
 [node name="Player" type="RigidBody2D" parent="." unique_id=1821552699]
-position = Vector2(597, 383)
+position = Vector2(515, 322)
 physics_material_override = SubResource("PhysicsMaterial_h2yge")
 script = ExtResource("1_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1271954369]
 position = Vector2(-1, 1)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1455754112]
-position = Vector2(2, 52.5)
+position = Vector2(15, 15)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_0xm2m")
