@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://tu74dutfe806" path="res://player.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://d0ptk8qd0a6ra" path="res://maryann.png" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://cra32whmcpe36" path="res://rope.gd" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://c4xnttyglo2vq" path="res://camera_2d.gd" id="3_h2yge"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0xm2m"]
 friction = 0.3
@@ -16,18 +18,18 @@ size = Vector2(1206, 39)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(202, 518)
 
-[node name="Node2D" type="Node2D" unique_id=1379440295]
+[node name="Main" type="Node2D" unique_id=1379440295]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=740600198]
+[node name="Floor" type="StaticBody2D" parent="." unique_id=740600198]
 position = Vector2(530, 551)
 physics_material_override = SubResource("PhysicsMaterial_0xm2m")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1672540626]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1672540626]
 position = Vector2(0, -1.5)
 scale = Vector2(0.6400024, 1)
 shape = SubResource("RectangleShape2D_ig7tw")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1303603756]
+[node name="Sprite" type="Sprite2D" parent="Floor" unique_id=1303603756]
 modulate = Color(1, 0, 1, 1)
 scale = Vector2(0.6400049, 0.32)
 texture = SubResource("PlaceholderTexture2D_ig7tw")
@@ -48,3 +50,10 @@ texture = ExtResource("2_0xm2m")
 position = Vector2(7.5, 6.5)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=354253494]
+zoom = Vector2(0.5, 0.5)
+script = ExtResource("3_h2yge")
+
+[node name="Rope" type="Line2D" parent="." unique_id=1720706563]
+script = ExtResource("3_1bvp3")

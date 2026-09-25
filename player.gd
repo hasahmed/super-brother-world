@@ -14,6 +14,4 @@ func _process(_delta: float) -> void:
 		apply_central_force(Vector2(-500, 0))
 	if (Input.is_action_just_pressed("jump")):
 		apply_central_impulse(Vector2(0, -1000))
-		#apply_impulse(Vector2(20, 0))
-		print("right")
 	pass
