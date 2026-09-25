@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://tu74dutfe806" path="res://player.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://d0ptk8qd0a6ra" path="res://maryann.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://cra32whmcpe36" path="res://rope.gd" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://unyqon35y0ym" path="res://assets/characters/stick-guy/animations/walking/stick-guy-walk-0.png" id="3_7mycd"]
 [ext_resource type="Script" uid="uid://c4xnttyglo2vq" path="res://camera_2d.gd" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://sha82lfoj5aa" path="res://assets/characters/stick-guy/animations/walking/stick-guy-walk-1.png" id="4_272bh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0xm2m"]
 friction = 0.3
@@ -16,7 +18,31 @@ size = Vector2(1206, 39)
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h2yge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
-size = Vector2(202, 518)
+size = Vector2(202, 402)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1bvp3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7mycd")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7mycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_272bh")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_5vw27"]
 
 [node name="Main" type="Node2D" unique_id=1379440295]
 
@@ -42,18 +68,32 @@ physics_material_override = SubResource("PhysicsMaterial_h2yge")
 script = ExtResource("1_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1271954369]
+visible = false
 position = Vector2(-2, 1)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1455754112]
-position = Vector2(7.5, 6.5)
+position = Vector2(7.5, -22.5)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Animation" type="AnimatedSprite2D" parent="Player" unique_id=846367778]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_1bvp3")
+animation = &"walk"
+frame_progress = 0.86637956
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=354253494]
 zoom = Vector2(0.5, 0.5)
 script = ExtResource("3_h2yge")
 
 [node name="Rope" type="Line2D" parent="." unique_id=1720706563]
+default_color = Color(0.011764706, 0.09019608, 0.08627451, 1)
 script = ExtResource("3_1bvp3")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=191583831]
+z_index = -4096
+position = Vector2(539.75, 320.75)
+scale = Vector2(108000.5, 64200.5)
+texture = SubResource("CanvasTexture_5vw27")
